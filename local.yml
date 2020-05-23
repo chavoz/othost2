@@ -93,19 +93,7 @@
         - default
         - phpMyAdmin
 
-    - include: tasks/DevAAC.yml
-      tags:
-        - DevAAC
-
-    - include: tasks/tfs.yml
-      tags:
-        - default
-        - tfs
-
     - include: tasks/general-last.yml
       tags:
         - default
         - general
-
-    - include: tasks/wine.yml
-      tags: wine

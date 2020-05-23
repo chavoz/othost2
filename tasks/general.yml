@@ -48,14 +48,6 @@
     mode: 0755
     state: directory
 
-- name: Install systemd service for TFS for otsmanager
-  template:
-    src: templates/tfs.service
-    dest: /home/pxm/.config/systemd/user/
-    owner: pxm
-    group: pxm
-    mode: 0644
-
 - name: loginctl enable-linger otsmanager
   command: loginctl enable-linger pxm
 
