@@ -102,11 +102,6 @@
         - default
         - tfs
 
-    - include: tasks/tfs-old.yml
-      tags:
-        - default
-        - tfs-old
-
     - include: tasks/general-last.yml
       tags:
         - default

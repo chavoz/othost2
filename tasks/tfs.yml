@@ -1,21 +1,4 @@
 ---
-- name: Install packages needed to compile TFS
-  apt:
-    state: latest
-    pkg:
-      - git
-      - cmake
-      - build-essential
-      - libgmp3-dev
-      - libmysqlclient-dev
-      - libboost-system-dev
-      - libboost-filesystem-dev
-      - liblua5.2-dev
-      - libpugixml-dev
-      - libluajit-5.1-dev
-      - libboost-iostreams-dev
-      - libcrypto++-dev
-
 - name: Download latest TFS from git
   git:
     repo: https://github.com/otland/forgottenserver.git

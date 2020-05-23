@@ -59,29 +59,7 @@
 - name: loginctl enable-linger otsmanager
   command: loginctl enable-linger pxm
 
-- name: Install .otsmanager shell configuration
-  template:
-    src: templates/.otsmanager
-    dest: /home/pxm/.otsmanager
-    owner: pxm
-    group: pxm
-    mode: 0644
-
-- name: Activate .otsmanager shell configuration file
-  lineinfile:
-    dest: /home/pxm/.bashrc
-    line: . ~/.pxm
-    regexp: ^\. ~/\.pxm
-
 - name: Delete Ubuntu Cloud ad
   file:
     path: /etc/update-motd.d/51-cloudguest
     state: absent
-
-- name: Install welcome message
-  template:
-    src: templates/61-otshosting-motd
-    dest: /etc/update-motd.d/61-otshosting-motd
-    owner: root
-    group: root
-    mode: 0755
