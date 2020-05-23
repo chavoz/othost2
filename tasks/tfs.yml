@@ -81,19 +81,3 @@
     state: directory
   become: true
   become_user: pxm
-
-- name: Cmake forgottenserver source
-  command: cmake ..
-  args:
-    chdir: /home/pxm/sv/build
-  tags: compile
-  become: true
-  become_user: pxm
-
-- name: Compile sv source
-  command: make -j2
-  args:
-    chdir: /home/pxm/sv/build
-  tags: compile
-  become: true
-  become_user: pxm
